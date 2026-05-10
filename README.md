@@ -8,11 +8,13 @@ Matlab study
 ### Matlab onramp in Matlab online courses
 
 
-When you enter a command without a semicolon at the end, MATLAB displays the result.
+### When you enter a command without a semicolon at the end, MATLAB displays the result.
+
+EX: 
 
 TASK 2
 
-Assign the result of 3*5 to a variable named m, as shown.
+Assign the result of 3*5 to a variable named m
 
 m = 3*5 
 
@@ -30,7 +32,9 @@ Create a variable named y that has the value of m/2.
 <img width="358" height="252" alt="Screenshot 2026-05-10 at 12 17 59 pm" src="https://github.com/user-attachments/assets/b2e98e34-9720-4874-8541-86a7dfcf4119" />
 
 
-Optionally, you can add a semicolon to the end of a command so that the result is not displayed. MATLAB still executes the command, and you can see the variable in the Workspace panel.
+### To add a semicolon to the end of a command so that the result is not displayed. MATLAB still executes the command, and you can see the variable in the Workspace panel.
+
+EX: 
 
 TASK 5
 
@@ -38,7 +42,7 @@ Enter k = 8 - 2;
 
 including the semicolon at the end.
 
-The result won't appear in the Command Window, but you can see the value of k in the Workspace panel.
+**The result won't appear in the Command Window, but you can see the value of k in the Workspace panel.**
 
 
 <img width="314" height="112" alt="Screenshot 2026-05-10 at 12 30 17 pm" src="https://github.com/user-attachments/assets/f6aa617b-6da5-4d14-bf33-deebc7e54cd6" />
@@ -47,7 +51,11 @@ The result won't appear in the Command Window, but you can see the value of k in
 <img width="462" height="368" alt="Screenshot 2026-05-10 at 12 30 57 pm" src="https://github.com/user-attachments/assets/62cfed44-0acb-4c5e-a500-8d0b0c4f0a88" />
 
 
-You can recall previous commands by pressing the Up arrow key ↑ on your keyboard. Note that the Command Window must be the active window for this keystroke to work.
+### You can recall previous commands by pressing the Up arrow key ↑ on your keyboard. 
+
+### Note. Command Window must be the active window for this keystroke to work.
+
+EX: 
 
 TASK 6
 
@@ -57,7 +65,7 @@ Press the Up arrow key to return to the command m = 3*5, and before pressing Ent
 <img width="1012" height="368" alt="Screenshot 2026-05-10 at 12 32 15 pm" src="https://github.com/user-attachments/assets/54f23b7a-2989-4ba0-a01f-d8c1ad99a7c8" />
 
 
-When you enter just a variable name at the command prompt, MATLAB displays the current value of that variable.
+### When you enter just a variable name at the command prompt, MATLAB displays the current value of that variable.
 
 TASK 7
 
@@ -69,7 +77,10 @@ Type just the variable name y at the command prompt, and press Enter.
 
 
 # Name Variables
-You can name your MATLAB variables anything you'd like as long as they start with a letter and contain only letters (A-Z, a-z), numbers, and underscores (_). *(MATLAB variables are also case sensitive)*
+
+### You can name your MATLAB variables anything you'd like as long as they start with a letter and contain only letters (A-Z, a-z), numbers, and underscores (_). *(MATLAB variables are also case sensitive)*
+
+EX: 
 
 TASK 1
 
@@ -98,20 +109,127 @@ If you use an invalid variable name, MATLAB displays an error message and a sugg
 
 # Save and Load Variables
 
+### You can save variables in your workspace to a MAT-file, a file format specific to MATLAB, by using the save command.
+
+### For example, to save all the variables in the workspace to a MAT-file named filename.mat, use the command:
+
+### >> save filename
+
 Task 1
-
-You can save variables in your workspace to a MAT-file, a file format specific to MATLAB, by using the save command.
-
-For example, to save all the variables in the workspace to a MAT-file named filename.mat, use the command:
->> save filename
 
 <img width="788" height="190" alt="Screenshot 2026-05-10 at 2 07 44 pm" src="https://github.com/user-attachments/assets/831ca738-5bbc-4bda-b2ae-4365a47b9fa7" />
 
-Task 2
 
-To remove all the variables from your workspace with the *clear command*.
+### To remove all the variables from your workspace with the *clear command*.
 
 EX: 
 >> clear
+
+### To load variables from a MAT-file, use the load command.
+
+>> load filename
+
+EX: 
+
+Task 3 
+
+Load the variables from the file datafile.mat.
+
+<img width="528" height="82" alt="Screenshot 2026-05-10 at 2 10 50 pm" src="https://github.com/user-attachments/assets/63deb646-72a0-4732-9fda-df40dbbd4148" />
+
+<img width="502" height="222" alt="Screenshot 2026-05-10 at 2 10 55 pm" src="https://github.com/user-attachments/assets/583c9230-98d6-4c70-adb4-277135a93f42" />
+
+### To see the contents of any variable by entering the name of the variable in the Command Window: 
+
+### >> *Variable name*
+
+EX:
+
+<img width="774" height="426" alt="Screenshot 2026-05-10 at 2 12 37 pm" src="https://github.com/user-attachments/assets/f5547fb3-e2e3-40d3-be2e-0e0211ea75f1" />
+
+
+### The clear command cleans up the workspace. You can use the clc command to clean up the Command Window.
+
+<img width="2394" height="950" alt="Screenshot 2026-05-10 at 2 18 53 pm" src="https://github.com/user-attachments/assets/5c4b4345-4b7e-4089-b3fa-7cb504a38130" />
+
+
+### Before closing MATLAB, you can use MAT-files to save your variables. You can then load the variables into the workspace when you reopen MATLAB.
+
+### To load or save only some of your variables, you can use additional inputs with the commands.
+
+The provided file myData.mat contains multiple variables. Try loading just the variable k.
+>> load myData k
+
+Then try saving the variable k to a new MAT-file named justk.mat.
+
+## Curiosity. Does that mean the variable 'k' is inside myData.mat and it will picking up with the data called 'k'?
+
+### 1. The Meaning of load myData k
+
+A file named myData.mat might contain various variables like a, b, c, and k. Running simply load myData will import all those variables into your Workspace at once.
+
+However, entering load myData k commands MATLAB to:
+
+  1. Search through the *myData.mat file*.
+
+  2. Extract only the specific *variable k*.
+
+  3. Load it into your current Workspace.
+
+### 2. The Meaning of save justk k
+
+Assuming the *variable k* is now active in your Workspace, executing this command tells MATLAB to:
+
+Create a new file named justk.mat. <- Name doesn't need to be follow in this format, however, you need to follow the rules that 
+
+# >> save (file name) (variable)
+
+Take the value of the variable k from the Workspace and save it into this new file.
+
+Note. This targeted approach is highly useful when you need to isolate specific data from a large file containing hundreds of variables, or when you only want to save particular results separately without cluttering your storage.
+
+
+## Curiosity 2. What will happen if I use the 'save' command before 'load'? 
+
+If you use the `save` command before `load`, the result depends entirely on the current state of your Workspace (memory). This can be broken down into three main scenarios:
+
+### 1. When the Workspace is Empty
+
+If you just opened MATLAB or used the `clear` command, your Workspace will be empty.
+
+* **Command:** `save testfile k`
+* **Result:** An error occurs.
+* **Reason:** MATLAB recognizes that the variable `k` does not exist anywhere in its active memory. It is impossible to save a variable that hasn't been defined yet.
+
+### 2. When You Create a Variable Manually
+
+You can use `save` without `load` if you declare the variable directly in the Command Window first.
+
+* **Command:**
+```matlab
+>> myValue = 100;
+>> save myNewFile myValue
+
+```
+
+
+* **Result:** It is saved successfully.
+* **Reason:** Whether a variable is imported via `load` or created manually by you, the only requirement is that the target variable must exist in the Workspace memory before saving.
+
+### 3. Using `save` with a Filename but No Variable Names
+
+This situation requires the most caution.
+
+* **Command:** `save backup`
+* **Result:** MATLAB saves *all* variables currently active in the Workspace into `backup.mat`.
+* **Risk:** If the Workspace is empty, it creates an empty file. However, if you have numerous variables loaded in the background, all of them are saved simultaneously, which can result in an unnecessarily large file size.
+
+---
+
+### 💡 Summary
+
+* The `save` function transfers variables currently active in your Workspace into a file.
+* It does not matter whether the data was imported (`load`) or manually created.
+* Attempting to save a variable name that does not exist in the Workspace will always result in an error.
 
 
