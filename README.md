@@ -162,7 +162,7 @@ The provided file myData.mat contains multiple variables. Try loading just the v
 
 Then try saving the variable k to a new MAT-file named justk.mat.
 
-## Curiosity. Does that mean the variable 'k' is inside myData.mat and it will picking up with the data called 'k'?
+## Curiosity. Does that mean the variable 'k' is inside myData.mat and it will pick up with the data called 'k'?
 
 ### 1. The Meaning of load myData k
 
@@ -180,11 +180,11 @@ However, entering load myData k commands MATLAB to:
 
 Assuming the *variable k* is now active in your Workspace, executing this command tells MATLAB to:
 
-Create a new file named justk.mat. <- Name doesn't need to be follow in this format, however, you need to follow the rules that 
+Create a new file named justk.mat. <- Name doesn't need to be followed in this format; however, you need to follow the rules that 
 
 # >> save (file name) (variable)
 
-Take the value of the variable k from the Workspace and save it into this new file.
+Take the value of the variable k from the Workspace and save it in this new file.
 
 Note. This targeted approach is highly useful when you need to isolate specific data from a large file containing hundreds of variables, or when you only want to save particular results separately without cluttering your storage.
 
@@ -199,7 +199,7 @@ If you just opened MATLAB or used the `clear` command, your Workspace will be em
 
 * **Command:** `save testfile k`
 * **Result:** An error occurs.
-* **Reason:** MATLAB recognizes that the variable `k` does not exist anywhere in its active memory. It is impossible to save a variable that hasn't been defined yet.
+* **Reason:** MATLAB recognises that the variable `k` does not exist anywhere in its active memory. It is impossible to save a variable that hasn't been defined yet.
 
 ### 2. When You Create a Variable Manually
 
@@ -231,5 +231,104 @@ This situation requires the most caution.
 * The `save` function transfers variables currently active in your Workspace into a file.
 * It does not matter whether the data was imported (`load`) or manually created.
 * Attempting to save a variable name that does not exist in the Workspace will always result in an error.
+
+
+# Use Built-in Functions and Constants
+
+MATLAB contains built-in constants, such as pi to represent π.
+>> a = pi
+
+>> a =  3.1416
+
+Although the Command Window output shows only four decimal places for pi, MATLAB internally represents the built-in constant with more decimal places.
+
+TASK1 
+
+Create a variable named x with a value of π/2.
+
+<img width="580" height="306" alt="Screenshot 2026-05-12 at 9 27 57 pm" src="https://github.com/user-attachments/assets/d2109011-d6a4-43ae-99b9-fa317fac4652" />
+
+
+
+MATLAB contains a wide variety of built-in functions, such as abs (absolute value) and eig (eigenvalues).
+
+>> a = sin(-5)
+
+a =  0.9589
+
+Pass inputs to functions by using parentheses, similar to function notation in math.
+
+
+TASK 2
+
+Calculate the sine of x by using the sin function. Assign the result to a variable named y.
+
+<img width="470" height="264" alt="Screenshot 2026-05-12 at 9 32 47 pm" src="https://github.com/user-attachments/assets/e03eb4d9-64b0-46b5-a15d-01b95e3cbe1c" />
+
+TASK 3
+
+Calculate the square root of -9 by using the sqrt function. Assign the result to a variable named z.
+
+<img width="496" height="266" alt="Screenshot 2026-05-12 at 9 33 58 pm" src="https://github.com/user-attachments/assets/b1e87e82-48d6-42d5-996e-72f0d61d83f3" />
+
+
+Note. the solution contains the imaginary number i : a built-in constant in MATLAB
+
+The Command Window output shows only the first four decimal places. 
+
+You can control the displayed precision with the format function.
+
+
+Task 4
+
+Try displaying more decimal places of the variable x using:
+
+<img width="558" height="252" alt="Screenshot 2026-05-12 at 9 36 10 pm" src="https://github.com/user-attachments/assets/21337b53-bdfa-45b9-a0f5-50528d8b8ce6" />
+
+<img width="420" height="252" alt="Screenshot 2026-05-12 at 9 36 21 pm" src="https://github.com/user-attachments/assets/5a4a8b47-79e6-46b9-befb-0051ba8c0223" />
+
+
+## Curiosity 1. Can't I specify a random number of decimal places while using this function; "format long/short"? 
+
+You cannot use it to specify a random number of decimal places (like "exactly 7" or "exactly 10").
+
+### 1. The Fixed Standards of format
+  
+  * The format command changes the display mode for the entire Command Window session.
+    
+  *It follows these hard-coded rules:
+
+    <img width="1464" height="394" alt="Screenshot 2026-05-12 at 9 44 49 pm" src="https://github.com/user-attachments/assets/ea3f0e1c-76a9-4194-bd1b-24065b33ba64" />
+
+### 2. How to specify a custom number of places
+
+If you want to decide exactly how many digits to display, you need to use formatted output functions rather than global display settings. The most common tool for this is fprintf.
+
+If you wanted to see exactly 7 decimal places, you would use:
+
+>> x = pi;
+>> fprintf('%.7f\n', x)
+3.1415927
+
+
+
+%: Starts the formatting command.
+
+.7: Tells MATLAB to show exactly 7 digits after the decimal point.
+
+f: Stands for "fixed-point" notation.
+
+
+### 3. Why doesn't format allow custom numbers?
+
+The format command is designed for UI convenience, not for reporting data.
+
+**format short** is meant to keep the screen clean so you can see many numbers at once without them wrapping to the next line.
+
+**format long** is meant to show you the full precision of a "double" (the default data type in MATLAB) to check for rounding errors.
+
+
+### Crucial Note: Changing the format never changes the actual value of the variable in memory. MATLAB always calculates with maximum precision (~16 digits) regardless of whether you are looking at 4 digits or 15.
+
 
 
