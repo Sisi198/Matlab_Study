@@ -378,6 +378,12 @@ You can also use the buttons in the toolstrip to switch between text and code.
 
 <img width="2062" height="1046" alt="Screenshot 2026-05-13 at 3 35 17 pm" src="https://github.com/user-attachments/assets/b2064ca5-7452-42a9-9922-9b55732a335f" />
 
+
+### Curiosity: Why do we do this?
+
+  : When you write complex code later on, it is beneficial to divide it into zones, such as "Data Loading starts here" or "Graph Plotting starts here." This allows you to isolate and test only the specific Section where an error occurred, rather than having to re-run the entire script every time you make a correction.
+
+
 # Debug MATLAB Code
 
 If an error occurs while MATLAB is running your program, or if MATLAB detects a significant issue in your code, the status indicator at the top right becomes an error icon. The code issue is also underlined in red.
@@ -400,3 +406,17 @@ Navigate to the error by clicking the error icon. Then fix the error.
 <img width="682" height="766" alt="Screenshot 2026-05-13 at 3 41 04 pm" src="https://github.com/user-attachments/assets/d50fce1a-7a31-47fc-8bce-f7c32de8f099" />
 
  <img width="2074" height="1036" alt="Screenshot 2026-05-13 at 3 38 03 pm" src="https://github.com/user-attachments/assets/81995142-14ac-4d45-85c0-62aba05af072" />
+
+
+
+
+
+ # Manually enter array
+
+ ## Array
+
+  * All MATLAB variables are arrays. So, each numeric variable can contain multiple numbers. You can store related data in one variable by using an array. Because arrays are a basic programming tool in the MATLAB language, it's important to get to know them and the terminology used to describe them.
+
+<img width="870" height="598" alt="Screenshot 2026-05-13 at 5 17 46 pm" src="https://github.com/user-attachments/assets/c7702510-09ee-4869-aa3a-9cab22ebd9b8" />
+
+
