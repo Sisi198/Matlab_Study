@@ -319,7 +319,7 @@ If you wanted to see exactly 7 decimal places, you would use:
 f: Stands for "fixed-point" notation.
 
 
-### 3. Why doesn't format allow custom numbers?
+### 3. Why doesn't the format allow custom numbers?
 
 The format command is designed for UI convenience, not for reporting data.
 
@@ -331,4 +331,72 @@ The format command is designed for UI convenience, not for reporting data.
 ### Crucial Note: Changing the format never changes the actual value of the variable in memory. MATLAB always calculates with maximum precision (~16 digits) regardless of whether you are looking at 4 digits or 15.
 
 
+# The MATLAB Editor
 
+<img width="2118" height="730" alt="Screenshot 2026-05-13 at 3 19 02 pm" src="https://github.com/user-attachments/assets/232e5415-619c-48cf-8fc6-6baa7ad3c3f3" />
+
+
+## TASK 1. 
+
+Run the script to populate the output pane.
+
+Then modify the command for Task 1 so that r has a value of 0.5.
+
+<img width="2036" height="668" alt="Screenshot 2026-05-13 at 3 21 28 pm" src="https://github.com/user-attachments/assets/f322b583-80ff-4e2b-8675-7aa1c3510348" />
+
+<img width="2062" height="1006" alt="Screenshot 2026-05-13 at 3 21 45 pm" src="https://github.com/user-attachments/assets/f015959b-8fc8-4d8f-9ba6-ecb881205ba2" />
+
+## TASK 2.
+
+To execute the code for just one section, click the  Run Section button in the MATLAB Toolstrip.
+
+Try changing the value of r and running only that section. What happens to the value of r in the output pane? What about the value of x?
+
+You can also use the buttons in the toolstrip to switch between text and code.
+
+# Put your cursor at the end of the last line of code, then try adding a new section using the Section Break button. 
+
+## When I press the section break button: 
+
+<img width="1372" height="822" alt="Screenshot 2026-05-13 at 3 31 53 pm" src="https://github.com/user-attachments/assets/5d662a3c-1932-46a0-b0fe-bea01e85d3ba" />
+
+
+# Use the Live editor text icon Text button and insert the text "Calculate Circumference". 
+
+## When I press the text button: 
+
+<img width="1222" height="842" alt="Screenshot 2026-05-13 at 3 33 35 pm" src="https://github.com/user-attachments/assets/8bcbe6fa-dcce-4a33-82e6-8338b1776491" />
+
+
+# Finally, use the Live editor code icon Code button and add the code y = 2*pi*r.
+
+## When I press the code button:
+
+<img width="1206" height="856" alt="Screenshot 2026-05-13 at 3 34 44 pm" src="https://github.com/user-attachments/assets/aa501816-2dcd-4b37-b7da-0c8d4acf709d" />
+
+## Add the code y = 2*pi*r : 
+
+<img width="2062" height="1046" alt="Screenshot 2026-05-13 at 3 35 17 pm" src="https://github.com/user-attachments/assets/b2064ca5-7452-42a9-9922-9b55732a335f" />
+
+# Debug MATLAB Code
+
+If an error occurs while MATLAB is running your program, or if MATLAB detects a significant issue in your code, the status indicator at the top right becomes an error icon. The code issue is also underlined in red.
+
+<img width="688" height="548" alt="Screenshot 2026-05-13 at 3 37 13 pm" src="https://github.com/user-attachments/assets/7f21e743-568e-4aa0-b3ba-dd0abd20d76b" />
+
+
+## You can view a description of the error by hovering your mouse over the message indicator or the underlined code.
+
+## TASK 1. 
+
+Navigate to the error by clicking the error icon. Then fix the error.
+
+<img width="2072" height="716" alt="Screenshot 2026-05-13 at 3 37 46 pm" src="https://github.com/user-attachments/assets/fb2fc4ba-b57e-4e8f-a433-c299ef5376bf" />
+
+<img width="2076" height="418" alt="Screenshot 2026-05-13 at 3 39 13 pm" src="https://github.com/user-attachments/assets/5f1fc6b7-d69a-47b9-bd68-a03b51e2c13d" />
+
+## Another type of warning signs:
+
+<img width="682" height="766" alt="Screenshot 2026-05-13 at 3 41 04 pm" src="https://github.com/user-attachments/assets/d50fce1a-7a31-47fc-8bce-f7c32de8f099" />
+
+ <img width="2074" height="1036" alt="Screenshot 2026-05-13 at 3 38 03 pm" src="https://github.com/user-attachments/assets/81995142-14ac-4d45-85c0-62aba05af072" />
