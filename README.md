@@ -298,7 +298,8 @@ You cannot use it to specify a random number of decimal places (like "exactly 7"
     
   *It follows these hard-coded rules:
 
-    <img width="1464" height="394" alt="Screenshot 2026-05-12 at 9 44 49 pm" src="https://github.com/user-attachments/assets/ea3f0e1c-76a9-4194-bd1b-24065b33ba64" />
+
+<img width="1464" height="394" alt="Screenshot 2026-05-12 at 9 44 49 pm" src="https://github.com/user-attachments/assets/ea3f0e1c-76a9-4194-bd1b-24065b33ba64" />
 
 ### 2. How to specify a custom number of places
 
