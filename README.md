@@ -1,8 +1,5 @@
 # Matlab_Study
 
-Matlab study
-
-
 ## How to start
 
 ### Matlab onramp in Matlab online courses
@@ -12,20 +9,20 @@ Matlab study
 
 EX: 
 
-TASK 2
+## TASK 2
 
 Assign the result of 3*5 to a variable named m
 
-m = 3*5 
+>> m = 3*5 
 
-TASK 3
+## TASK 3
 
 Enter the command m = m + 1 to see what happens.
 
 <img width="334" height="214" alt="Screenshot 2026-05-10 at 12 16 56 pm" src="https://github.com/user-attachments/assets/7be7a44b-fc14-4a94-b4e1-12d2a058576f" />
 
 
-TASK 4
+## TASK 4
 
 Create a variable named y that has the value of m/2.
 
@@ -36,7 +33,7 @@ Create a variable named y that has the value of m/2.
 
 EX: 
 
-TASK 5
+## TASK 5
 
 Enter k = 8 - 2; 
 
@@ -57,7 +54,7 @@ including the semicolon at the end.
 
 EX: 
 
-TASK 6
+## TASK 6
 
 Press the Up arrow key to return to the command m = 3*5, and before pressing Enter, edit the command to be m = 3*k.
 
@@ -67,7 +64,7 @@ Press the Up arrow key to return to the command m = 3*5, and before pressing Ent
 
 ### When you enter just a variable name at the command prompt, MATLAB displays the current value of that variable.
 
-TASK 7
+## TASK 7
 
 In Task 4, you calculated the value of y using the value of m. Was y recalculated when you modified m in Task 6?
 
@@ -82,7 +79,7 @@ Type just the variable name y at the command prompt, and press Enter.
 
 EX: 
 
-TASK 1
+## TASK 1
 
 Create a variable named A with the value -2.
 
@@ -90,17 +87,17 @@ Create a variable named A with the value -2.
 
 <img width="470" height="276" alt="Screenshot 2026-05-10 at 2 01 30 pm" src="https://github.com/user-attachments/assets/922968d5-8d07-437e-9442-d1fd3094b1d7" />
 
-Task 2
+## Task 2
 
 Use A and a to calculate 
 
-a+A / 2
+>> a+A / 2
 
 Store the result in a variable named meanAa.
 
 <img width="520" height="484" alt="Screenshot 2026-05-10 at 2 03 41 pm" src="https://github.com/user-attachments/assets/35e4cd06-31fa-4d8a-9cf8-840787580cb0" />
 
-Task 3
+## Task 3
 
 If you use an invalid variable name, MATLAB displays an error message and a suggested correction. You can use this correction, modify it, or press Esc to delete the suggestion.
 
@@ -115,7 +112,7 @@ If you use an invalid variable name, MATLAB displays an error message and a sugg
 
 ### >> save filename
 
-Task 1
+## Task 1
 
 <img width="788" height="190" alt="Screenshot 2026-05-10 at 2 07 44 pm" src="https://github.com/user-attachments/assets/831ca738-5bbc-4bda-b2ae-4365a47b9fa7" />
 
@@ -131,7 +128,7 @@ EX:
 
 EX: 
 
-Task 3 
+## Task 3 
 
 Load the variables from the file datafile.mat.
 
@@ -242,7 +239,7 @@ MATLAB contains built-in constants, such as pi to represent π.
 
 Although the Command Window output shows only four decimal places for pi, MATLAB internally represents the built-in constant with more decimal places.
 
-TASK1 
+## TASK1 
 
 Create a variable named x with a value of π/2.
 
@@ -259,13 +256,13 @@ a =  0.9589
 Pass inputs to functions by using parentheses, similar to function notation in math.
 
 
-TASK 2
+## TASK 2
 
 Calculate the sine of x by using the sin function. Assign the result to a variable named y.
 
 <img width="470" height="264" alt="Screenshot 2026-05-12 at 9 32 47 pm" src="https://github.com/user-attachments/assets/e03eb4d9-64b0-46b5-a15d-01b95e3cbe1c" />
 
-TASK 3
+## TASK 3
 
 Calculate the square root of -9 by using the sqrt function. Assign the result to a variable named z.
 
@@ -279,7 +276,7 @@ The Command Window output shows only the first four decimal places.
 You can control the displayed precision with the format function.
 
 
-Task 4
+## Task 4
 
 Try displaying more decimal places of the variable x using:
 
