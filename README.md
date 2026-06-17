@@ -597,4 +597,24 @@ Indices can be nonconsecutive numbers. For example, you can use [1 3 6] as an in
   
   >> x(3) = 1
 
+## Task 1.
+
+Change the first element of v2 from NaN to 0.5.
+
+>> v2(1) = 0.5
+
+<img width="2122" height="1340" alt="Screenshot 2026-06-17 at 6 59 26 pm" src="https://github.com/user-attachments/assets/243bf2a7-4408-4dcb-b278-7973380ce443" />
+
+* You can also use indexing to change the elements in a matrix. Remember to specify the row and column when indexing into a matrix.
+  
+  >> A(3,2) = 1
+  
+## Task 2. 
+
+Change the element in the first row and last column of data to 0.5.
+
+>> data(1,end) = 0.5
+
+<img width="2092" height="1400" alt="Screenshot 2026-06-17 at 7 01 00 pm" src="https://github.com/user-attachments/assets/5022faf7-7813-4225-8bb1-6e5a42d2afd1" />
+
 
