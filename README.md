@@ -536,3 +536,65 @@ ___________________________ Another way:
 The reason why idx 8 is 0.5300:
 
 <img width="788" height="336" alt="Screenshot 2026-06-16 at 6 41 15 pm" src="https://github.com/user-attachments/assets/6248f384-60c0-4a59-8b22-fbeb03086ebf" />
+
+
+## Extract Multiple Elements
+
+* When used as an index, the colon operator (:) specifies all the elements in that dimension. For example, this code creates a column vector containing all the elements from the first column of A.
+    
+  >> x = A(:,1)
+
+## Task 1.
+Create a column vector named density that contains all the elements from the 2nd column of the matrix named data.
+
+>> density = data(:, 2)
+
+<img width="2088" height="1334" alt="Screenshot 2026-06-17 at 5 39 58 pm" src="https://github.com/user-attachments/assets/bbdae345-c411-4a34-b86e-53ac07f6b74c" />
+
+* You can use the colon operator to specify a range of values. This code creates a matrix containing the first, second, and third rows of the matrix A.
+
+   >> x = A(1:3,:)
+
+## Task 2.
+Create a variable volumes that contains the last two columns of data. You can see the size of data in the output pane to the right of your screen.
+
+>> volumes = data(:,3:4)
+_________________________ Another way:
+>> volumes = data(:,end-1)
+
+<img width="2070" height="1076" alt="Screenshot 2026-06-17 at 5 41 54 pm" src="https://github.com/user-attachments/assets/0c042e00-a254-4bf8-ad35-ee23c8d4665a" />
+<img width="2098" height="1066" alt="Screenshot 2026-06-17 at 5 43 17 pm" src="https://github.com/user-attachments/assets/de2fc5f7-3717-41c6-b0c9-ea09d200698f" />
+
+
+* You can also extract multiple elements from a vector. Recall that for indexing into vectors, you only provide one input. For example, this code returns a subset of vector v containing the elements from index 3 to the end.
+
+  >> x = v(3:end)
+
+## Task 3.
+
+Create a vector named p containing the 2nd through 5th elements of density.
+
+>> p = density(2:5)
+
+<img width="2126" height="1302" alt="Screenshot 2026-06-17 at 5 45 11 pm" src="https://github.com/user-attachments/assets/ddbc37c7-f5b1-4404-9c4c-370cddb0fff6" />
+
+
+## Task 4.
+
+Indices can be nonconsecutive numbers. For example, you can use [1 3 6] as an index to extract the first, third, and sixth elements of density: 
+
+
+>> density([1 3 6])
+
+<img width="2098" height="1376" alt="Screenshot 2026-06-17 at 5 46 33 pm" src="https://github.com/user-attachments/assets/6a77a336-c13c-488b-97c7-6432b06822b7" />
+
+
+# Change Values in Arrays
+
+* If you know the position of an element, you can change its value by combining indexing with assignment.
+
+* For example, to change the third element of x to 1, you reference the third element with x(3) and then use the assignment operator = to assign the value 1 to that element.
+  
+  >> x(3) = 1
+
+
