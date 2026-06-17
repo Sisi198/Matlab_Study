@@ -409,9 +409,6 @@ Navigate to the error by clicking the error icon. Then fix the error.
  <img width="2074" height="1036" alt="Screenshot 2026-05-13 at 3 38 03 pm" src="https://github.com/user-attachments/assets/81995142-14ac-4d45-85c0-62aba05af072" />
 
 
-
-
-
  # Manually enter array
 
  ## Array
@@ -420,4 +417,125 @@ Navigate to the error by clicking the error icon. Then fix the error.
 
 <img width="870" height="598" alt="Screenshot 2026-05-13 at 5 17 46 pm" src="https://github.com/user-attachments/assets/c7702510-09ee-4869-aa3a-9cab22ebd9b8" />
 
+## Index into Arrays
 
+* To index into a vector, use a single index value. For example, this code returns the 5th element of row or column vector x.
+  
+    >> y = x(5)
+
+## Task 1.
+
+Create a variable x that contains the value in the 2nd element of the variable v.
+
+>> x = v(2)
+
+<img width="840" height="738" alt="Screenshot 2026-06-16 at 6 26 06 pm" src="https://github.com/user-attachments/assets/1a6b54f7-4fe9-4925-a36e-0d70f048788a" />
+
+* You can use the MATLAB keyword end as an index to reference the last element.
+
+  >> y = x(end)
+  
+## Task 2. 
+
+Extract the last element of the variable v using the end keyword. Assign this value to a variable named y.
+
+>> y = v(end)
+
+<img width="820" height="830" alt="Screenshot 2026-06-16 at 6 27 16 pm" src="https://github.com/user-attachments/assets/726fb337-942d-4afb-9588-09df92dada60" />
+
+* You can use arithmetic with the keyword end.
+
+* For example:
+  >> y = x(end-2)
+
+## Task 3. 
+
+Create a variable z that contains the value in the second-to-last (end-1) element of v.
+
+>> z = v(end-1)
+
+<img width="830" height="914" alt="Screenshot 2026-06-16 at 6 28 17 pm" src="https://github.com/user-attachments/assets/5afb6eb9-af73-40c5-a8de-675708de8b50" />
+
+* You can extract values from a matrix using row-column indexing.
+
+  >> y = A(5,7)
+
+* This syntax extracts the value in the 5th row and 7th column of A and assigns the result to the variable y.
+
+## Task 4. 
+
+Create a variable a that contains the value in the 6th row and 3rd column of the variable data.
+
+>> a = data(6,3)
+
+<img width="828" height="790" alt="Screenshot 2026-06-16 at 6 29 42 pm" src="https://github.com/user-attachments/assets/8acdd9de-81c4-4d40-bd32-5d15d8f1db6c" />
+
+
+* You can use end as either a row or column index to reference the last row or the last column, respectively.
+
+  >> y = A(end,2)
+  
+## Task 5. 
+
+Extract the value in the last row and 3rd column of the variable data. Assign this value to a variable named b.
+
+>> b = data(end,3)
+
+<img width="786" height="844" alt="Screenshot 2026-06-16 at 6 31 42 pm" src="https://github.com/user-attachments/assets/c970ccb8-cc30-4b2e-92e6-c74b6839d0f4" />
+
+
+* If you use only one index with a matrix, MATLAB traverses down each column in order. For example, this code returns the value 6.
+
+  >> A = [5 6; 7 8]
+  >> A(3)
+  
+* Core Concept: Linear Indexing in MATLAB
+   * The sorting rule it uses for this line is called Column-major order. This means MATLAB lines up the entirety of Column 1 first, and then appends Column 2 right underneath it.
+  1. The Structure of Matrix A:
+      * When you define A = [5 6; 7 8], MATLAB builds a $2 \times 2$ matrix that looks like this:
+        <img width="350" height="196" alt="Screenshot 2026-06-16 at 6 37 01 pm" src="https://github.com/user-attachments/assets/73f522c9-2cb2-4754-b98f-362279d8288c" />
+      * Column 1: 5, 7 & Column 2: 6, 8
+
+  2. How MATLAB Flattens the Grid in Memory
+
+      * If you pass only a single index like A(3) instead of using coordinate subscripts like A(row, col), MATLAB searches for the number based on its linear position in memory.
+    
+      * It counts the positions by moving downwards from top to bottom through each column:
+      
+        1. 1st position: 5 (Row 1, Column 1)
+        2. 2nd position: 7 (Row 2, Column 1 $\rightarrow$ moving down the column)
+        3. 3rd position: 6 (Row 1, Column 2 $\rightarrow$ Column 1 is finished, moving to the top of the next column)
+        4. 4th position: 8 (Row 2, Column 2)
+        
+      * When completely flattened into a linear array, the sequence becomes: [5, 7, 6, 8].
+    
+  3. Why does A(3) return 6?
+
+   * Because MATLAB scans the flattened sequence and pulls the value sitting at the exact 3rd position:
+
+     * A(1) is 5
+     * A(2) is 7
+     * A(3) is 6
+     * A(4) is 8
+
+
+## Task 6.
+
+Using one index, try extracting the eighth element of data. You can also use a variable as an index. Try creating a variable idx with the value 8 and using idx as the index to data.
+
+
+>> idx = 8;
+>> result = data(idx)
+
+<img width="396" height="48" alt="Screenshot 2026-06-17 at 5 34 22 pm" src="https://github.com/user-attachments/assets/af2c1fac-1d0b-444d-926e-28e7f43d7e57" />
+
+___________________________ Another way:
+
+>> data(8)
+
+<img width="670" height="134" alt="Screenshot 2026-06-16 at 6 41 24 pm" src="https://github.com/user-attachments/assets/472d9cef-64c0-412a-a800-54a86ef5f281" />
+
+
+The reason why idx 8 is 0.5300:
+
+<img width="788" height="336" alt="Screenshot 2026-06-16 at 6 41 15 pm" src="https://github.com/user-attachments/assets/6248f384-60c0-4a59-8b22-fbeb03086ebf" />
