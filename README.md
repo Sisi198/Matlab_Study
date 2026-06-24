@@ -618,3 +618,40 @@ Change the element in the first row and last column of data to 0.5.
 <img width="2092" height="1400" alt="Screenshot 2026-06-17 at 7 01 00 pm" src="https://github.com/user-attachments/assets/5022faf7-7813-4225-8bb1-6e5a42d2afd1" />
 
 
+* You can combine indexing with assignment to change array elements to other elements. For example, this code changes the value of x(1) to x(2).
+  
+x(1) = x(2)
+
+## Task 3. 
+
+Try changing the first column of data to the second column of data.
+
+>> data(1) = data(2)
+
+<img width="818" height="504" alt="Screenshot 2026-06-24 at 5 06 24 pm" src="https://github.com/user-attachments/assets/549c4ced-01c3-4217-b183-575c245a3a9a" />
+
+
+# Perform Array Operations on Vectors
+
+MATLAB is designed to work naturally with arrays. For example, you can add a scalar value to all the elements of an array.
+x = [1 2 3];
+y = x + 2
+y = 
+     3     4     5
+
+
+## Task 1. 
+
+Add 1 to each element of v1 and store the result in a variable named r.
+
+>> r = v1 + 1
+
+<img width="2078" height="766" alt="Screenshot 2026-06-24 at 5 09 27 pm" src="https://github.com/user-attachments/assets/edb6a914-d8d8-44d9-a787-3698be2ad4a4" />
+
+* You can add any two arrays of the same size.
+
+  z = x + y
+
+## task 2.
+
+
