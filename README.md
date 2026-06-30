@@ -652,6 +652,72 @@ Add 1 to each element of v1 and store the result in a variable named r.
 
   z = x + y
 
-## task 2.
+## Task 2.
+
+Create a vector vs that is the sum of the vectors v1 and v2.
+
+>> vs = v1 + v2
+
+<img width="2060" height="360" alt="Screenshot 2026-06-29 at 6 30 13 pm" src="https://github.com/user-attachments/assets/c12ad82a-5436-43db-aec9-4e9ffada5e95" />
 
 
+* You can multiply or divide all the elements of an array by a scalar.
+
+>> z = 2*x
+>> y = x/3
+
+
+## Task 3. 
+
+Create a variable va that contains the vector vs divided by 2.
+
+>> va = vs/2
+
+<img width="2134" height="550" alt="Screenshot 2026-06-29 at 6 30 54 pm" src="https://github.com/user-attachments/assets/e195472d-4947-469b-afce-4984e0a9a245" />
+
+
+* You can apply basic statistical functions in MATLAB to a vector to produce a single output.
+
+* For example, the maximum value of a vector can be determined using the max function.
+
+   >> xMax = max(x)
+   
+## Task 4. Create a variable vm that contains the maximum of the va vector.
+
+>> vm = max(va)
+
+<img width="2100" height="298" alt="Screenshot 2026-06-29 at 6 32 18 pm" src="https://github.com/user-attachments/assets/df75117c-2ea5-456a-a461-fd1b83780430" />
+
+
+* MATLAB has functions that perform mathematical operations on an entire array of values in a single command.
+
+* For example, you can find the square root of each element in the array x with this syntax.
+  
+  >> xSqrt = sqrt(x)
+  
+## Task 5. Using the round function, create a variable named vr that contains the rounded elements of va.
+
+>> vr = round(va)
+
+<img width="2062" height="492" alt="Screenshot 2026-06-29 at 6 34 57 pm" src="https://github.com/user-attachments/assets/a6a4ca72-57ef-4040-9375-fc8d786e5e8a" />
+
+
+* The "*" operator performs matrix multiplication.
+
+* So, if you use "*" to multiply two equally sized vectors, you get an error message because the inner dimensions do not agree.
+
+  >> z = [3 4] * [10 20]
+  >> Error using  *
+  >> Incorrect dimensions for matrix multiplication. 
+
+* The ".*" operator performs element-wise multiplication by multiplying the corresponding elements of two equally sized arrays.
+
+  >> z = [3 4] .* [10 20]
+  >> z = 
+      30    80
+  
+## Task 6. Create a variable named mass that contains the element-wise product of density and va.
+
+>> mass = [density] .* [va]
+
+<img width="2032" height="410" alt="Screenshot 2026-06-29 at 6 37 52 pm" src="https://github.com/user-attachments/assets/7613b18e-6267-4b57-8c2b-a0c0868df92c" />
