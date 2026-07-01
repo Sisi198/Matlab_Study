@@ -850,7 +850,124 @@ Has 7 columns
 
 
 
-## Task 2. 
+## Task 2. Plot mass2 (y-axis) against sample (x-axis). Use red (r) star (*) markers and no line in your plot.
+
+First attempt:
+
+>> plot(sample, mass2, "r--*")
+
+<img width="2780" height="1238" alt="Screenshot 2026-07-01 at 5 28 38 pm" src="https://github.com/user-attachments/assets/d1553d0e-4151-4626-9819-8a7710c6c914" />
+
+$\rightarrow$ error occurs, reading the instruction again; find out it says, "no line", change the input
 
 
+Second attempt:
+
+>> plot(sample, mass2, "r*")
+
+<img width="2786" height="1298" alt="Screenshot 2026-07-01 at 5 28 53 pm" src="https://github.com/user-attachments/assets/a1a930e5-f911-4b90-8b23-7571c59ae5c1" />
+
+
+* Notice that each plot command created a separate plot. You can plot one line on top of another in the same axes by using the hold on command.
+  
+  >> plot(x1,y1)
+  >> hold on
+  >> plot(x2,y2)
+  
+## Task 3. Enter the hold on command. Then plot mass1 (y-axis) against sample (x-axis) with magenta (m) square (s) markers and no line.
+  
+  >> plot(sample, mass1)
+  >> hold on
+  >> plot(sample, mass1, "ms")
+
+
+  <img width="2030" height="654" alt="Screenshot 2026-07-01 at 5 32 32 pm" src="https://github.com/user-attachments/assets/2faeb29c-0944-4f26-ae8e-50a51585dbc0" />
+  <img width="2048" height="656" alt="Screenshot 2026-07-01 at 5 32 49 pm" src="https://github.com/user-attachments/assets/66b842c9-1363-490c-9e8e-12f38682416c" />
+
+
+### $\rightarrow$ Q. How the Graphs Overlap (The Layer Concept): Inside MATLAB, the rendering is structured as three distinct sheets stacked on top of one another:
+  
+  * Layer 1: plot(sample, mass1) $\rightarrow$ Draws the initial blue line.
+  * Layer 2: hold on $\rightarrow$ Freezes the current canvas (Layer 1) and places a transparent sheet directly over it.
+  * Layer 3: plot(sample, mass1, "ms") $\rightarrow$ Draws only the magenta square markers on that new transparent sheet.
+
+* As a result, because these sheets are stacked, you see the magenta squares sitting perfectly along the blue line. If you hadn't used hold on, the moment Layer 3 was executed, Layer 1 (the blue line) would have been thrown into the trash, leaving only the magenta squares behind on a blank canvas.
+
+$\rightarrow$  "the modified elements were newly added and superimposed on top"
+
+----------------------------------
+* While the hold state is on, plots continue to appear on the same axes. To return to the default plot behaviour, where each plot appears on its own axes, enter hold off.
+
+
+## Task 4. Enter the hold off command.
+
+  >> hold off
+
+
+* When you plot a single vector by itself, MATLAB uses the vector values as the y-axis data and sets the x-axis data to the range of 1 to n (the number of elements in the vector).
+
+  >> plot(y)
+
+
+## TASK 5. Plot the vector v1.
+
+  >> plot(v1)
+
+  <img width="840" height="640" alt="Screenshot 2026-07-01 at 5 58 39 pm" src="https://github.com/user-attachments/assets/04ed0c15-5443-4ea6-ba04-1806d4a0115c" />
+
+
+* When you use the plot function, you can optionally set properties using one or more name-value arguments, which consist of an argument name and an associated value. For example, this command plots a heavy line.
+
+  >> plot(y,LineWidth=5)
+
+## Task 6. Plot v1 with a line width of 3.
+
+  >> plot(v1, LineWidth=3)
+
+    <img width="2052" height="660" alt="Screenshot 2026-07-01 at 5 59 51 pm" src="https://github.com/user-attachments/assets/25831496-0d8e-4c20-90fc-20d7bfddd27b" />
+
+* You can provide name-value arguments to the plot function after the line specification.
+
+  >> plot(x,y,"ro-",LineWidth=5)
+  
+## Task 7. Plot v1 (y-axis) against sample (x-axis) with red (r) circle (o) markers and a solid line (-). Use a line width of 4.
+
+  >> plot(sample, v1, "ro-", LineWidth=4)
+
+  <img width="824" height="606" alt="Screenshot 2026-07-01 at 6 02 56 pm" src="https://github.com/user-attachments/assets/33ef097f-9647-44bb-b0e9-65006c09b196" />
+
+# Annotate Plots
+
+* You can add labels to plots using plot annotation functions, such as title. The input to these functions is text. Text in MATLAB is enclosed in double quotes (").
+
+  >> title("Plot Title")
+  
+## Task 1. Add the title "Sample Mass" to the existing plot.
+
+  >> title("Sample Mass")
+
+  <img width="2000" height="578" alt="Screenshot 2026-07-01 at 6 29 18 pm" src="https://github.com/user-attachments/assets/5b8c89e0-b363-4147-be63-3b90fa4e6eee" />
+
+
+
+* You can add labels to your axes using the xlabel and ylabel functions.
+
+  >> ylabel("Y-Axis Label")
+
+## Task 2. Add the y-axis label "Mass (g)".
+
+  >> ylabel("Mass (g)")
+  
+  <img width="848" height="790" alt="Screenshot 2026-07-01 at 6 30 47 pm" src="https://github.com/user-attachments/assets/e5b790ae-479c-43fc-8466-e8c4a766bd3d" />
+
+
+* You can add a legend to your plot using the legend function.
+
+  >> legend("a","b","c")
+
+## Task 3. Create a legend with the labels "Exp A" and "Exp B", in that order.
+
+  >> legend("Exp A", "Exp B")
+
+  <img width="854" height="742" alt="Screenshot 2026-07-01 at 6 37 43 pm" src="https://github.com/user-attachments/assets/cbcd3b09-5371-49a3-966f-7d3a847ae72e" />
 
