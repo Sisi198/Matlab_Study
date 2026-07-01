@@ -721,3 +721,136 @@ Create a variable va that contains the vector vs divided by 2.
 >> mass = [density] .* [va]
 
 <img width="2032" height="410" alt="Screenshot 2026-06-29 at 6 37 52 pm" src="https://github.com/user-attachments/assets/7613b18e-6267-4b57-8c2b-a0c0868df92c" />
+
+
+## Task 7. There are other compatible sizes. For example, try: x = [1 2; 3 4; 5 6; 7 8].*[1;2;3;4] What size is x?
+
+1. Verifying the Dimensions of the Operands. Standard matrix operations require strict dimension matching. 
+
+  However, if one of the arrays contains a dimension size of 1, MATLAB applies flexible alignment rules:
+  
+    First array: [1 2; 3 4; 5 6; 7 8] $\rightarrow$ Dimensions: 4 x 2
+    Second array: [1; 2; 3; 4] $\rightarrow$ Dimensions: 4 x 1
+
+2. Under the Hood: How MATLAB Handles Broadcasting. The ".*" operator denotes element-wise multiplication. 
+
+  To force the 4 x 1 column vector to match the dimensions of the leading 4 x 2 matrix, MATLAB automatically duplicates the existing column along the horizontal axis to expand its footprint.
+  
+  In practice, the trailing vector [1; 2; 3; 4] is internally projected into a 4 x 2 grid like this:
+
+     <img width="828" height="324" alt="Screenshot 2026-06-30 at 5 26 32 pm" src="https://github.com/user-attachments/assets/995c04f5-4409-4ff4-ad8a-9c6d3e860c21" />
+
+3. The Actual Element-by-Element Computation
+
+   Once the dimensions are perfectly matched, MATLAB multiplies the overlapping coordinates element by element:
+
+     <img width="1184" height="362" alt="Screenshot 2026-06-30 at 5 27 15 pm" src="https://github.com/user-attachments/assets/7e0ca179-b907-4503-852c-7e9119014d0d" />
+
+   This yields the following final output for matrix x:
+
+      <img width="428" height="244" alt="Screenshot 2026-06-30 at 5 27 53 pm" src="https://github.com/user-attachments/assets/3c590c16-f400-4adf-9479-066a25701fe8" />
+
+### $\rightarrow$ Counting the rows and columns of this final matrix confirms that the output size is 4 x 2.
+
+
+# Function calls
+
+## Request Multiple Outputs in Function Calls
+
+* You can apply the size function to a vector or matrix to produce a single output variable containing the array size in a two-element row vector.
+* The first element is the number of rows and the second element is the number of columns.
+
+  >> s = size(x)
+  
+## Task 1. Create a variable named dsize containing the size of the data variable.
+
+  >> dsize = size(data)
+
+  <img width="2000" height="740" alt="Screenshot 2026-06-30 at 7 50 39 pm" src="https://github.com/user-attachments/assets/01a5d214-c36f-46e0-9970-2476c25e9cbb" />
+
+* You can also request two output variables from the size function. In this case, each variable contains the size of one of the dimensions of the input array. Use square brackets ([ ]) to request more than one output.
+
+  >> [xrow,xcol] = size(x)
+
+  
+## Task 2. Create the variables dr and dc that respectively contain the number of rows and columns of the variable data.
+
+  >> [dr,dc] = size(data)
+
+  <img width="2054" height="730" alt="Screenshot 2026-06-30 at 7 52 28 pm" src="https://github.com/user-attachments/assets/9c5d3b27-991e-4cdf-b0f5-a86db80ea534" />
+
+* You can find the maximum value of a vector and its corresponding index value using the max function. The first output from the max function is the maximum value of the input vector. When called with two outputs, the second output is the index value.
+  
+  >> [xMax,idx] = max(x)
+
+## Task 3. Create the variables vMax and ivMax containing the maximum value of the v2 vector and the corresponding index value, respectively.
+
+  >> [vMax, ivMax] = max(v2)
+  
+  <img width="2054" height="854" alt="Screenshot 2026-06-30 at 7 55 51 pm" src="https://github.com/user-attachments/assets/b1da072e-65b6-4f8f-abe7-01d8aaf39a9c" />
+
+* If you need only the second output from a function, you can ignore the first output by using a tilde (~) in its place.
+
+* For example, you can just get the number of columns in a matrix:
+
+  >> [~,xcol] = size(x)
+
+  <img width="2018" height="1062" alt="Screenshot 2026-06-30 at 7 57 54 pm" src="https://github.com/user-attachments/assets/feaadd72-b3c4-4f62-bc01-449833db2b29" />
+
+# Documentation
+
+## Use MATLAB Documentation
+
+* The MATLAB documentation contains examples and information that can help you when working on your own problems.
+
+## Task 1. Use the documentation for randi to help complete this task.
+
+Create a matrix named x that:
+
+Contains random integers in the range from 1 to 20
+
+Has 5 rows
+
+Has 7 columns
+
+  >> x = randi(20, 5, 7)
+
+<img width="2094" height="582" alt="Screenshot 2026-06-30 at 8 03 21 pm" src="https://github.com/user-attachments/assets/36f01cde-6b90-48f7-8b8e-39f021627e4f" />
+
+* You can also open the documentation using the doc function. If you know the name of the function and want more information about it, you can use this command:
+
+  >> doc randi
+
+* However, if you don't know the name of the function, you can search the documentation using phrases. Try searching the documentation for a function that creates normally distributed numbers (instead of uniformly distributed numbers) using:
+
+  >> doc normally distributed numbers
+
+# Plots
+
+* You can plot two vectors of the same length against each other using the plot function.
+
+  >> plot(x,y)
+
+## Task 1. Create a plot with sample on the x-axis and mass1 on the y-axis.
+
+  >> plot(sample, mass1)
+
+  <img width="2094" height="1180" alt="Screenshot 2026-06-30 at 8 10 21 pm" src="https://github.com/user-attachments/assets/c5a91bc3-eb2a-4380-8002-93fc09bfbb08" />
+
+* You can specify the colour, line style, and marker of a plot by using different symbols in double quotes as another input to the plot function.
+
+  >> plot(x,y,"r--o")
+
+* The command plots a red (r) dashed (--) line with circle (o) markers.
+
+
+<img width="2002" height="658" alt="Screenshot 2026-06-30 at 8 11 46 pm" src="https://github.com/user-attachments/assets/936ea995-2974-4863-a689-86b8a522f1d0" />
+<img width="1968" height="1164" alt="Screenshot 2026-06-30 at 8 11 55 pm" src="https://github.com/user-attachments/assets/b796eb5f-4abe-4c2f-a453-26040da75de3" />
+<img width="1972" height="812" alt="Screenshot 2026-06-30 at 8 12 01 pm" src="https://github.com/user-attachments/assets/878387fd-97eb-4f40-a79e-d20b178019f0" />
+
+
+
+## Task 2. 
+
+
+
