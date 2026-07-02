@@ -682,48 +682,56 @@ Create a variable va that contains the vector vs divided by 2.
 
    >> xMax = max(x)
    
-## Task 4. Create a variable vm that contains the maximum of the va vector.
+## Task 4. 
+
+Create a variable vm that contains the maximum of the va vector.
 
 >> vm = max(va)
 
 <img width="2100" height="298" alt="Screenshot 2026-06-29 at 6 32 18 pm" src="https://github.com/user-attachments/assets/df75117c-2ea5-456a-a461-fd1b83780430" />
 
 
-* MATLAB has functions that perform mathematical operations on an entire array of values in a single command.
+### MATLAB has functions that perform mathematical operations on an entire array of values in a single command.
 
-* For example, you can find the square root of each element in the array x with this syntax.
+### For example, you can find the square root of each element in the array x with this syntax.
   
   >> xSqrt = sqrt(x)
   
-## Task 5. Using the round function, create a variable named vr that contains the rounded elements of va.
+## Task 5. 
 
->> vr = round(va)
+Using the round function, create a variable named vr that contains the rounded elements of va.
 
-<img width="2062" height="492" alt="Screenshot 2026-06-29 at 6 34 57 pm" src="https://github.com/user-attachments/assets/a6a4ca72-57ef-4040-9375-fc8d786e5e8a" />
+  >> vr = round(va)
+  
+  <img width="2062" height="492" alt="Screenshot 2026-06-29 at 6 34 57 pm" src="https://github.com/user-attachments/assets/a6a4ca72-57ef-4040-9375-fc8d786e5e8a" />
 
 
-* The "*" operator performs matrix multiplication.
+### The "*" operator performs matrix multiplication.
 
-* So, if you use "*" to multiply two equally sized vectors, you get an error message because the inner dimensions do not agree.
+So, if you use "*" to multiply two equally sized vectors, you get an error message because the inner dimensions do not agree.
 
   >> z = [3 4] * [10 20]
   >> Error using  *
   >> Incorrect dimensions for matrix multiplication. 
 
-* The ".*" operator performs element-wise multiplication by multiplying the corresponding elements of two equally sized arrays.
+The ".*" operator performs element-wise multiplication by multiplying the corresponding elements of two equally sized arrays.
 
   >> z = [3 4] .* [10 20]
   >> z = 
       30    80
   
-## Task 6. Create a variable named mass that contains the element-wise product of density and va.
+## Task 6. 
 
->> mass = [density] .* [va]
+Create a variable named mass that contains the element-wise product of density and va.
 
-<img width="2032" height="410" alt="Screenshot 2026-06-29 at 6 37 52 pm" src="https://github.com/user-attachments/assets/7613b18e-6267-4b57-8c2b-a0c0868df92c" />
+  >> mass = [density] .* [va]
+  
+  <img width="2032" height="410" alt="Screenshot 2026-06-29 at 6 37 52 pm" src="https://github.com/user-attachments/assets/7613b18e-6267-4b57-8c2b-a0c0868df92c" />
 
 
-## Task 7. There are other compatible sizes. For example, try: x = [1 2; 3 4; 5 6; 7 8].*[1;2;3;4] What size is x?
+## Task 7. 
+
+There are other compatible sizes. For example, try: x = [1 2; 3 4; 5 6; 7 8].*[1;2;3;4] What size is x?
 
 1. Verifying the Dimensions of the Operands. Standard matrix operations require strict dimension matching. 
 
@@ -757,8 +765,9 @@ Create a variable va that contains the vector vs divided by 2.
 
 ## Request Multiple Outputs in Function Calls
 
-* You can apply the size function to a vector or matrix to produce a single output variable containing the array size in a two-element row vector.
-* The first element is the number of rows and the second element is the number of columns.
+### You can apply the size function to a vector or matrix to produce a single output variable containing the array size in a two-element row vector.
+
+The first element is the number of rows and the second element is the number of columns.
 
   >> s = size(x)
   
@@ -768,7 +777,9 @@ Create a variable va that contains the vector vs divided by 2.
 
   <img width="2000" height="740" alt="Screenshot 2026-06-30 at 7 50 39 pm" src="https://github.com/user-attachments/assets/01a5d214-c36f-46e0-9970-2476c25e9cbb" />
 
-* You can also request two output variables from the size function. In this case, each variable contains the size of one of the dimensions of the input array. Use square brackets ([ ]) to request more than one output.
+### You can also request two output variables from the size function. In this case, each variable contains the size of one of the dimensions of the input array. 
+
+Use square brackets ([ ]) to request more than one output.
 
   >> [xrow,xcol] = size(x)
 
@@ -778,20 +789,24 @@ Create a variable va that contains the vector vs divided by 2.
   >> [dr,dc] = size(data)
 
   <img width="2054" height="730" alt="Screenshot 2026-06-30 at 7 52 28 pm" src="https://github.com/user-attachments/assets/9c5d3b27-991e-4cdf-b0f5-a86db80ea534" />
+  
+### You can find the maximum value of a vector and its corresponding index value using the max function. 
 
-* You can find the maximum value of a vector and its corresponding index value using the max function. The first output from the max function is the maximum value of the input vector. When called with two outputs, the second output is the index value.
+The first output from the max function is the maximum value of the input vector. When called with two outputs, the second output is the index value.
   
   >> [xMax,idx] = max(x)
 
-## Task 3. Create the variables vMax and ivMax containing the maximum value of the v2 vector and the corresponding index value, respectively.
+## Task 3. 
+
+Create the variables vMax and ivMax containing the maximum value of the v2 vector and the corresponding index value, respectively.
 
   >> [vMax, ivMax] = max(v2)
   
   <img width="2054" height="854" alt="Screenshot 2026-06-30 at 7 55 51 pm" src="https://github.com/user-attachments/assets/b1da072e-65b6-4f8f-abe7-01d8aaf39a9c" />
 
-* If you need only the second output from a function, you can ignore the first output by using a tilde (~) in its place.
+### If you need only the second output from a function, you can ignore the first output by using a tilde (~) in its place.
 
-* For example, you can just get the number of columns in a matrix:
+For example, you can just get the number of columns in a matrix:
 
   >> [~,xcol] = size(x)
 
@@ -801,9 +816,11 @@ Create a variable va that contains the vector vs divided by 2.
 
 ## Use MATLAB Documentation
 
-* The MATLAB documentation contains examples and information that can help you when working on your own problems.
+### The MATLAB documentation contains examples and information that can help you when working on your own problems.
 
-## Task 1. Use the documentation for randi to help complete this task.
+## Task 1. 
+
+Use the documentation for randi to help complete this task.
 
 Create a matrix named x that:
 
@@ -817,31 +834,36 @@ Has 7 columns
 
 <img width="2094" height="582" alt="Screenshot 2026-06-30 at 8 03 21 pm" src="https://github.com/user-attachments/assets/36f01cde-6b90-48f7-8b8e-39f021627e4f" />
 
-* You can also open the documentation using the doc function. If you know the name of the function and want more information about it, you can use this command:
+
+### You can also open the documentation using the doc function. 
+
+If you know the name of the function and want more information about it, you can use this command:
 
   >> doc randi
 
-* However, if you don't know the name of the function, you can search the documentation using phrases. Try searching the documentation for a function that creates normally distributed numbers (instead of uniformly distributed numbers) using:
+However, if you don't know the name of the function, you can search the documentation using phrases. Try searching the documentation for a function that creates normally distributed numbers (instead of uniformly distributed numbers) using:
 
   >> doc normally distributed numbers
 
 # Plots
 
-* You can plot two vectors of the same length against each other using the plot function.
+### You can plot two vectors of the same length against each other using the plot function.
 
   >> plot(x,y)
 
-## Task 1. Create a plot with sample on the x-axis and mass1 on the y-axis.
+## Task 1. 
+
+Create a plot with sample on the x-axis and mass1 on the y-axis.
 
   >> plot(sample, mass1)
 
   <img width="2094" height="1180" alt="Screenshot 2026-06-30 at 8 10 21 pm" src="https://github.com/user-attachments/assets/c5a91bc3-eb2a-4380-8002-93fc09bfbb08" />
 
-* You can specify the colour, line style, and marker of a plot by using different symbols in double quotes as another input to the plot function.
+### You can specify the colour, line style, and marker of a plot by using different symbols in double quotes as another input to the plot function.
 
   >> plot(x,y,"r--o")
 
-* The command plots a red (r) dashed (--) line with circle (o) markers.
+### The command plots a red (r) dashed (--) line with circle (o) markers.
 
 
 <img width="2002" height="658" alt="Screenshot 2026-06-30 at 8 11 46 pm" src="https://github.com/user-attachments/assets/936ea995-2974-4863-a689-86b8a522f1d0" />
@@ -850,7 +872,9 @@ Has 7 columns
 
 
 
-## Task 2. Plot mass2 (y-axis) against sample (x-axis). Use red (r) star (*) markers and no line in your plot.
+## Task 2. 
+
+Plot mass2 (y-axis) against sample (x-axis). Use red (r) star (*) markers and no line in your plot.
 
 First attempt:
 
@@ -868,13 +892,15 @@ Second attempt:
 <img width="2786" height="1298" alt="Screenshot 2026-07-01 at 5 28 53 pm" src="https://github.com/user-attachments/assets/a1a930e5-f911-4b90-8b23-7571c59ae5c1" />
 
 
-* Notice that each plot command created a separate plot. You can plot one line on top of another in the same axes by using the hold on command.
+### Notice that each plot command created a separate plot. You can plot one line on top of another in the same axes by using the hold on command.
   
   >> plot(x1,y1)
   >> hold on
   >> plot(x2,y2)
   
-## Task 3. Enter the hold on command. Then plot mass1 (y-axis) against sample (x-axis) with magenta (m) square (s) markers and no line.
+## Task 3. 
+
+Enter the hold on command. Then plot mass1 (y-axis) against sample (x-axis) with magenta (m) square (s) markers and no line.
   
   >> plot(sample, mass1)
   >> hold on
@@ -896,41 +922,51 @@ Second attempt:
 $\rightarrow$  "the modified elements were newly added and superimposed on top"
 
 ----------------------------------
-* While the hold state is on, plots continue to appear on the same axes. To return to the default plot behaviour, where each plot appears on its own axes, enter hold off.
+
+### While the hold state is on, plots continue to appear on the same axes. To return to the default plot behaviour, where each plot appears on its own axes, enter hold off.
 
 
-## Task 4. Enter the hold off command.
+## Task 4. 
+
+Enter the hold off command.
 
   >> hold off
 
 
-* When you plot a single vector by itself, MATLAB uses the vector values as the y-axis data and sets the x-axis data to the range of 1 to n (the number of elements in the vector).
+### When you plot a single vector by itself, MATLAB uses the vector values as the y-axis data and sets the x-axis data to the range of 1 to n (the number of elements in the vector).
 
   >> plot(y)
 
 
-## TASK 5. Plot the vector v1.
+## TASK 5. 
+
+Plot the vector v1.
 
   >> plot(v1)
 
   <img width="840" height="640" alt="Screenshot 2026-07-01 at 5 58 39 pm" src="https://github.com/user-attachments/assets/04ed0c15-5443-4ea6-ba04-1806d4a0115c" />
 
+### When you use the plot function, you can optionally set properties using one or more name-value arguments, which consist of an argument name and an associated value. 
 
-* When you use the plot function, you can optionally set properties using one or more name-value arguments, which consist of an argument name and an associated value. For example, this command plots a heavy line.
+For example, this command plots a heavy line.
 
   >> plot(y,LineWidth=5)
 
-## Task 6. Plot v1 with a line width of 3.
+## Task 6. 
+
+Plot v1 with a line width of 3.
 
   >> plot(v1, LineWidth=3)
 
     <img width="2052" height="660" alt="Screenshot 2026-07-01 at 5 59 51 pm" src="https://github.com/user-attachments/assets/25831496-0d8e-4c20-90fc-20d7bfddd27b" />
 
-* You can provide name-value arguments to the plot function after the line specification.
+### You can provide name-value arguments to the plot function after the line specification.
 
   >> plot(x,y,"ro-",LineWidth=5)
   
-## Task 7. Plot v1 (y-axis) against sample (x-axis) with red (r) circle (o) markers and a solid line (-). Use a line width of 4.
+## Task 7. 
+
+Plot v1 (y-axis) against sample (x-axis) with red (r) circle (o) markers and a solid line (-). Use a line width of 4.
 
   >> plot(sample, v1, "ro-", LineWidth=4)
 
@@ -938,34 +974,39 @@ $\rightarrow$  "the modified elements were newly added and superimposed on top"
 
 # Annotate Plots
 
-* You can add labels to plots using plot annotation functions, such as title. The input to these functions is text. Text in MATLAB is enclosed in double quotes (").
+### You can add labels to plots using plot annotation functions, such as title. The input to these functions is text. Text in MATLAB is enclosed in double quotes (").
 
   >> title("Plot Title")
   
-## Task 1. Add the title "Sample Mass" to the existing plot.
+## Task 1. 
+
+Add the title "Sample Mass" to the existing plot.
 
   >> title("Sample Mass")
 
   <img width="2000" height="578" alt="Screenshot 2026-07-01 at 6 29 18 pm" src="https://github.com/user-attachments/assets/5b8c89e0-b363-4147-be63-3b90fa4e6eee" />
 
 
-
-* You can add labels to your axes using the xlabel and ylabel functions.
+### You can add labels to your axes using the xlabel and ylabel functions.
 
   >> ylabel("Y-Axis Label")
 
-## Task 2. Add the y-axis label "Mass (g)".
+## Task 2. 
+
+Add the y-axis label "Mass (g)".
 
   >> ylabel("Mass (g)")
   
   <img width="848" height="790" alt="Screenshot 2026-07-01 at 6 30 47 pm" src="https://github.com/user-attachments/assets/e5b790ae-479c-43fc-8466-e8c4a766bd3d" />
 
 
-* You can add a legend to your plot using the legend function.
+### You can add a legend to your plot using the legend function.
 
   >> legend("a","b","c")
 
-## Task 3. Create a legend with the labels "Exp A" and "Exp B", in that order.
+## Task 3. 
+
+Create a legend with the labels "Exp A" and "Exp B", in that order.
 
   >> legend("Exp A", "Exp B")
 
@@ -976,40 +1017,46 @@ $\rightarrow$  "the modified elements were newly added and superimposed on top"
 
 ## import data as a table
 
-*  The table from Import Tool has been loaded and displayed in the script.
+### The table from Import Tool has been loaded and displayed in the script.
 
-* To extract a variable from a table, you can use dot notation.
+  To extract a variable from a table, you can use dot notation.
+  
+    >> var = table.VariableName
 
-  >> var = table.VariableName
+## Task 1. 
 
-## Task 1. Assign the contents of "elements.Density" to a column vector named d.
+Assign the contents of "elements.Density" to a column vector named d.
 
   >> d = elements.Density
 
  <img width="856" height="752" alt="Screenshot 2026-07-02 at 1 36 22 pm" src="https://github.com/user-attachments/assets/6bf95d5d-9ef9-4e37-9d21-480dadd1949c" />
 
 
-* If you are working with a table, you might want to keep related data together. Instead of creating separate variables for each new calculation, you can append the calculated result to a table.
+### If you are working with a table, you might want to keep related data together. Instead of creating separate variables for each new calculation, you can append the calculated result to a table.
 
   >> data.HeightMeters = data.HeightYards*0.9144
 
-* If the variable "data.HeightMeters" doesn't exist, MATLAB creates a new variable in the data table with the name "HeightMeters".
+### If the variable "data.HeightMeters" doesn't exist, MATLAB creates a new variable in the data table with the name "HeightMeters".
 
-## Task 2. Multiply each element of "elements.Density" with "elements.Volume1". Remember to use element-wise multiplication with .*. Assign the result to "elements.Mass". Don't use a semicolon at the end of the command because you need to use the result in the output pane in the next task.
+## Task 2. 
+
+Multiply each element of "elements.Density" with "elements.Volume1". Remember to use element-wise multiplication with .*. Assign the result to "elements.Mass". Don't use a semicolon at the end of the command because you need to use the result in the output pane in the next task.
 
   >> elements.Mass = elements.Density.*elements.Volume1
   
   <img width="2030" height="1058" alt="Screenshot 2026-07-02 at 1 53 54 pm" src="https://github.com/user-attachments/assets/d29f7d90-5d22-4609-b5b7-bda2ddcb35d6" />
 
-* You can interact with a table by clicking it in the output pane of a live script. For example, you can sort a table using one of its variables.
+### You can interact with a table by clicking it in the output pane of a live script. For example, you can sort a table using one of its variables.
 
-<img width="590" height="176" alt="Screenshot 2026-07-02 at 1 57 18 pm" src="https://github.com/user-attachments/assets/2e400c31-9321-4757-84da-3ff0fff0c71a" />
+  <img width="590" height="176" alt="Screenshot 2026-07-02 at 1 57 18 pm" src="https://github.com/user-attachments/assets/2e400c31-9321-4757-84da-3ff0fff0c71a" />
 
-* To save your table modifications in your script, click the Update Code button.
-  
-<img width="588" height="134" alt="Screenshot 2026-07-02 at 1 57 35 pm" src="https://github.com/user-attachments/assets/3b22bc98-70b8-491f-9f51-377ee253ddf2" />
+### To save your table modifications in your script, click the Update Code button.
+    
+  <img width="588" height="134" alt="Screenshot 2026-07-02 at 1 57 35 pm" src="https://github.com/user-attachments/assets/3b22bc98-70b8-491f-9f51-377ee253ddf2" />
 
-## Task 3. Sort the table from smallest to largest mass. You may need to scroll right to select the Mass column. Then click Update Code in the output pane of the script.
+## Task 3. 
+
+Sort the table from smallest to largest mass. You may need to scroll right to select the Mass column. Then click Update Code in the output pane of the script.
 
 <img width="934" height="1290" alt="Screenshot 2026-07-02 at 1 58 39 pm" src="https://github.com/user-attachments/assets/d2b8f6b5-4aab-4e66-9406-40a80ebd5251" />
 
@@ -1017,9 +1064,11 @@ $\rightarrow$  "the modified elements were newly added and superimposed on top"
 
 <img width="898" height="644" alt="Screenshot 2026-07-02 at 1 59 51 pm" src="https://github.com/user-attachments/assets/53b6c2d5-f34f-4935-9247-2e9aa147cc4f" />
 
-* You can use dot notation to extract table variables. To extract rows, use regular array indexing.
+### You can use dot notation to extract table variables. To extract rows, use regular array indexing.
 
-## Task 4. Try extracting the first three rows of the table.
+## Task 4. 
+
+Try extracting the first three rows of the table.
 
 >> top3 = elements(1:3,:)
 
@@ -1032,33 +1081,39 @@ Notice that top3 is also a table.
 
 ## Relational operators
 
-* Relational operators such as >, <, ==, and ~= perform comparisons between two values. The outcome of a comparison for equality or inequality is either 1 (true) or 0 (false).
+### Relational operators such as >, <, ==, and ~= perform comparisons between two values. The outcome of a comparison for equality or inequality is either 1 (true) or 0 (false).
 
-## Task 1. Test if π is less than 4 by using the relational operator <. Assign the output to a variable named x.
+## Task 1. 
+
+Test if π is less than 4 by using the relational operator <. Assign the output to a variable named x.
 
   >> x = pi < 4
   <img width="2072" height="272" alt="Screenshot 2026-07-02 at 2 14 06 pm" src="https://github.com/user-attachments/assets/012b064e-1301-4e11-bd33-0af78c3a2eed" />
 
-* You can compare an array to a single scalar value using relational operators. The result is a logical array of the same size as the original array.
+### You can compare an array to a single scalar value using relational operators. The result is a logical array of the same size as the original array.
   
     y = [5 10 15] > 12
     y = 
         0    0    1
 
-## Task 2. Test the vector v1 for elements that are less than 4. Assign the output to a variable named y.
+## Task 2. 
+
+Test the vector v1 for elements that are less than 4. Assign the output to a variable named y.
 
   >> y = v1 < 4
 
   <img width="1996" height="990" alt="Screenshot 2026-07-02 at 2 15 51 pm" src="https://github.com/user-attachments/assets/f8f13a05-3826-46cd-a5ef-1ecdf292438c" />
 
 
-* In MATLAB, = is used to assign a value to a variable, while == is used to test if two values are equal. Like other relational operators, you can use both = and == in one line of code.
+### In MATLAB, = is used to assign a value to a variable, while == is used to test if two values are equal. Like other relational operators, you can use both = and == in one line of code.
     y = [5 10 15] == 10
     y = 
         0    1    0
 
 
-## Task 3. Test the vector sample for elements that are equal to 18. Assign the output to a variable named z.
+## Task 3. 
+
+Test the vector sample for elements that are equal to 18. Assign the output to a variable named z.
 
   >> z = sample == 18
   
@@ -1066,17 +1121,20 @@ Notice that top3 is also a table.
   
   <img width="826" height="360" alt="Screenshot 2026-07-02 at 2 18 02 pm" src="https://github.com/user-attachments/assets/2a9c8a96-4283-4f2b-971f-e4ffb027f148" />
 
-* You can combine logical comparisons by using the logical operators AND (&) and OR (|).
 
-* To find values both less than 6 **and** greater than 5, use &.
+### You can combine logical comparisons by using the logical operators AND (&) and OR (|).
 
-  >> v1 < 6 & v1 > 5
+   To find values both less than 6 **and** greater than 5, use &.
+  
+    >> v1 < 6 & v1 > 5
+  
+   To find values either greater than 6 **or** less than 2, use |.
+  
+    >> v1 > 6 | v1 < 2
 
-* To find values either greater than 6 **or** less than 2, use |.
+## Task 4. 
 
-  >> v1 > 6 | v1 < 2
-
-## Task 4. Try finding the values in the sample that are between 10 and 20.
+Try finding the values in the sample that are between 10 and 20.
 
   >> sample > 10 & sample < 20
 
@@ -1084,40 +1142,46 @@ Notice that top3 is also a table.
 
 ## Logical Indexing
 
-* You can extract elements from an array based on a condition with logical indexing. For example, you can extract the elements that are less than a specific number.
+### You can extract elements from an array based on a condition with logical indexing. For example, you can extract the elements that are less than a specific number.
 
-* You can use relational operators to create a logical array, then use the logical array as an index. When you use a logical vector as an index to extract elements, it must be the same size as your vector. MATLAB extracts the elements where the corresponding index is 1 (true).
+### You can use relational operators to create a logical array, then use the logical array as an index. When you use a logical vector as an index to extract elements, it must be the same size as your vector. MATLAB extracts the elements where the corresponding index is 1 (true).
 
 <img width="460" height="488" alt="Screenshot 2026-07-02 at 2 23 23 pm" src="https://github.com/user-attachments/assets/79c1750f-3ca5-4fd6-8a3b-e3f91d950936" />
 
-## Task 1. In the script, the variable isGreater contains the result of v1 > 6. Create a variable x that extracts the elements of v1 that are greater than 6. To extract the elements, use isGreater as an index to v1.
+## Task 1. 
+
+In the script, the variable isGreater contains the result of v1 > 6. Create a variable x that extracts the elements of v1 that are greater than 6. To extract the elements, use isGreater as an index to v1.
 
   >> x = v1(isGreater)
 
   <img width="2042" height="792" alt="Screenshot 2026-07-02 at 2 25 25 pm" src="https://github.com/user-attachments/assets/bf2e4868-d60f-4eb9-8d5c-e0ef5b1ab510" />
 
-* You can also use the relational operator and index in one line of code. For example, this code extracts all elements of v1 that are greater than 6.
+### You can also use the relational operator and index in one line of code. For example, this code extracts all elements of v1 that are greater than 6.
 
     v = v1(v1 > 6)
     v =
         6.6678
         9.0698
 
-## Task 2. In one line of code, create a variable y that contains all the elements of v1 that are less than 4.
+## Task 2. 
+
+In one line of code, create a variable y that contains all the elements of v1 that are less than 4.
 
   >> y = v1(v1 < 4)
   
   <img width="884" height="828" alt="Screenshot 2026-07-02 at 2 26 56 pm" src="https://github.com/user-attachments/assets/4237bb89-6b03-4a78-ad74-9e9654594e0f" />
 
 
-* You can also use logical indexing with two different arrays.
+### You can also use logical indexing with two different arrays.
 
   v = sample(v1 > 6)
   v =
       18
       23
 
-## Task 3. Create a variable z that contains the elements of sample corresponding to where v1 is less than 4.
+## Task 3. 
+
+Create a variable z that contains the elements of sample corresponding to where v1 is less than 4.
 
   >> z = sample(v1 < 4)
 
@@ -1147,17 +1211,19 @@ Notice that top3 is also a table.
   <img width="884" height="828" alt="Screenshot 2026-07-02 at 2 26 56 pm" src="https://github.com/user-attachments/assets/75d33009-d978-4f7a-b2c2-b799b16e456d" />
 
 
-* You can use logical indexing to reassign values in an array. For example, to replace all values in the array x that are equal to 999 with the value 1, use this syntax.
+### You can use logical indexing to reassign values in an array. For example, to replace all values in the array x that are equal to 999 with the value 1, use this syntax.
 
   >> x(x==999) = 1
   
-## Task 4. Modify v1 so that any value less than 4 is replaced with the value 0.
+## Task 4. 
+
+Modify v1 so that any value less than 4 is replaced with the value 0.
 
   >> v1(v1 < 4) = 0
 
   <img width="2104" height="394" alt="Screenshot 2026-07-02 at 3 09 18 pm" src="https://github.com/user-attachments/assets/ac70f728-ca8f-438b-9eb6-a8166abd7335" />
 
-* You can also perform logical indexing with matrices. The variable data is a matrix. Try changing the values in data that are less than 4 to 0.
+### You can also perform logical indexing with matrices. The variable data is a matrix. Try changing the values in data that are less than 4 to 0.
 
   >> data(data < 4) = 0
 
@@ -1166,4 +1232,8 @@ Notice that top3 is also a table.
 
 # Programming
 
-## 
+## Decision Branching
+
+
+
+
