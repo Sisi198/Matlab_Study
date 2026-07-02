@@ -1,4 +1,4 @@
-# Matlab_Study
+<img width="1230" height="492" alt="Screenshot 2026-07-02 at 2 39 51 pm" src="https://github.com/user-attachments/assets/ce56c293-75d1-4a7c-97ce-659ba2082fb8" /># Matlab_Study
 
 ## How to start
 
@@ -971,3 +971,199 @@ $\rightarrow$  "the modified elements were newly added and superimposed on top"
 
   <img width="854" height="742" alt="Screenshot 2026-07-01 at 6 37 43 pm" src="https://github.com/user-attachments/assets/cbcd3b09-5371-49a3-966f-7d3a847ae72e" />
 
+
+# Import tool
+
+## import data as a table
+
+*  The table from Import Tool has been loaded and displayed in the script.
+
+* To extract a variable from a table, you can use dot notation.
+
+  >> var = table.VariableName
+
+## Task 1. Assign the contents of "elements.Density" to a column vector named d.
+
+  >> d = elements.Density
+
+ <img width="856" height="752" alt="Screenshot 2026-07-02 at 1 36 22 pm" src="https://github.com/user-attachments/assets/6bf95d5d-9ef9-4e37-9d21-480dadd1949c" />
+
+
+* If you are working with a table, you might want to keep related data together. Instead of creating separate variables for each new calculation, you can append the calculated result to a table.
+
+  >> data.HeightMeters = data.HeightYards*0.9144
+
+* If the variable "data.HeightMeters" doesn't exist, MATLAB creates a new variable in the data table with the name "HeightMeters".
+
+## Task 2. Multiply each element of "elements.Density" with "elements.Volume1". Remember to use element-wise multiplication with .*. Assign the result to "elements.Mass". Don't use a semicolon at the end of the command because you need to use the result in the output pane in the next task.
+
+  >> elements.Mass = elements.Density.*elements.Volume1
+  
+  <img width="2030" height="1058" alt="Screenshot 2026-07-02 at 1 53 54 pm" src="https://github.com/user-attachments/assets/d29f7d90-5d22-4609-b5b7-bda2ddcb35d6" />
+
+* You can interact with a table by clicking it in the output pane of a live script. For example, you can sort a table using one of its variables.
+
+<img width="590" height="176" alt="Screenshot 2026-07-02 at 1 57 18 pm" src="https://github.com/user-attachments/assets/2e400c31-9321-4757-84da-3ff0fff0c71a" />
+
+* To save your table modifications in your script, click the Update Code button.
+  
+<img width="588" height="134" alt="Screenshot 2026-07-02 at 1 57 35 pm" src="https://github.com/user-attachments/assets/3b22bc98-70b8-491f-9f51-377ee253ddf2" />
+
+## Task 3. Sort the table from smallest to largest mass. You may need to scroll right to select the Mass column. Then click Update Code in the output pane of the script.
+
+<img width="934" height="1290" alt="Screenshot 2026-07-02 at 1 58 39 pm" src="https://github.com/user-attachments/assets/d2b8f6b5-4aab-4e66-9406-40a80ebd5251" />
+
+<img width="2098" height="494" alt="Screenshot 2026-07-02 at 1 59 28 pm" src="https://github.com/user-attachments/assets/085215d0-c55e-4d2e-8a2b-011621c1f3ff" />
+
+<img width="898" height="644" alt="Screenshot 2026-07-02 at 1 59 51 pm" src="https://github.com/user-attachments/assets/53b6c2d5-f34f-4935-9247-2e9aa147cc4f" />
+
+* You can use dot notation to extract table variables. To extract rows, use regular array indexing.
+
+## Task 4. Try extracting the first three rows of the table.
+
+>> top3 = elements(1:3,:)
+
+<img width="2090" height="316" alt="Screenshot 2026-07-02 at 2 12 19 pm" src="https://github.com/user-attachments/assets/b34516d5-eb50-4f1a-990d-8a96fb8174a5" />
+
+Notice that top3 is also a table.
+
+
+# Logical Arrays 
+
+## Relational operators
+
+* Relational operators such as >, <, ==, and ~= perform comparisons between two values. The outcome of a comparison for equality or inequality is either 1 (true) or 0 (false).
+
+## Task 1. Test if π is less than 4 by using the relational operator <. Assign the output to a variable named x.
+
+  >> x = pi < 4
+  <img width="2072" height="272" alt="Screenshot 2026-07-02 at 2 14 06 pm" src="https://github.com/user-attachments/assets/012b064e-1301-4e11-bd33-0af78c3a2eed" />
+
+* You can compare an array to a single scalar value using relational operators. The result is a logical array of the same size as the original array.
+  
+    y = [5 10 15] > 12
+    y = 
+        0    0    1
+
+## Task 2. Test the vector v1 for elements that are less than 4. Assign the output to a variable named y.
+
+  >> y = v1 < 4
+
+  <img width="1996" height="990" alt="Screenshot 2026-07-02 at 2 15 51 pm" src="https://github.com/user-attachments/assets/f8f13a05-3826-46cd-a5ef-1ecdf292438c" />
+
+
+* In MATLAB, = is used to assign a value to a variable, while == is used to test if two values are equal. Like other relational operators, you can use both = and == in one line of code.
+    y = [5 10 15] == 10
+    y = 
+        0    1    0
+
+
+## Task 3. Test the vector sample for elements that are equal to 18. Assign the output to a variable named z.
+
+  >> z = sample == 18
+  
+  <img width="2102" height="496" alt="Screenshot 2026-07-02 at 2 17 44 pm" src="https://github.com/user-attachments/assets/9db0e99d-acc0-4a3e-9b6a-df6b6ef5e10f" />
+  
+  <img width="826" height="360" alt="Screenshot 2026-07-02 at 2 18 02 pm" src="https://github.com/user-attachments/assets/2a9c8a96-4283-4f2b-971f-e4ffb027f148" />
+
+* You can combine logical comparisons by using the logical operators AND (&) and OR (|).
+
+* To find values both less than 6 **and** greater than 5, use &.
+
+  >> v1 < 6 & v1 > 5
+
+* To find values either greater than 6 **or** less than 2, use |.
+
+  >> v1 > 6 | v1 < 2
+
+## Task 4. Try finding the values in the sample that are between 10 and 20.
+
+  >> sample > 10 & sample < 20
+
+  <img width="2042" height="456" alt="Screenshot 2026-07-02 at 2 21 30 pm" src="https://github.com/user-attachments/assets/28e50882-3b95-440f-ad46-d742a05a7ae8" />
+
+## Logical Indexing
+
+* You can extract elements from an array based on a condition with logical indexing. For example, you can extract the elements that are less than a specific number.
+
+* You can use relational operators to create a logical array, then use the logical array as an index. When you use a logical vector as an index to extract elements, it must be the same size as your vector. MATLAB extracts the elements where the corresponding index is 1 (true).
+
+<img width="460" height="488" alt="Screenshot 2026-07-02 at 2 23 23 pm" src="https://github.com/user-attachments/assets/79c1750f-3ca5-4fd6-8a3b-e3f91d950936" />
+
+## Task 1. In the script, the variable isGreater contains the result of v1 > 6. Create a variable x that extracts the elements of v1 that are greater than 6. To extract the elements, use isGreater as an index to v1.
+
+  >> x = v1(isGreater)
+
+  <img width="2042" height="792" alt="Screenshot 2026-07-02 at 2 25 25 pm" src="https://github.com/user-attachments/assets/bf2e4868-d60f-4eb9-8d5c-e0ef5b1ab510" />
+
+* You can also use the relational operator and index in one line of code. For example, this code extracts all elements of v1 that are greater than 6.
+
+    v = v1(v1 > 6)
+    v =
+        6.6678
+        9.0698
+
+## Task 2. In one line of code, create a variable y that contains all the elements of v1 that are less than 4.
+
+  >> y = v1(v1 < 4)
+  
+  <img width="884" height="828" alt="Screenshot 2026-07-02 at 2 26 56 pm" src="https://github.com/user-attachments/assets/4237bb89-6b03-4a78-ad74-9e9654594e0f" />
+
+
+* You can also use logical indexing with two different arrays.
+
+  v = sample(v1 > 6)
+  v =
+      18
+      23
+
+## Task 3. Create a variable z that contains the elements of sample corresponding to where v1 is less than 4.
+
+  >> z = sample(v1 < 4)
+
+  <img width="884" height="828" alt="Screenshot 2026-07-02 at 2 26 56 pm" src="https://github.com/user-attachments/assets/a375f181-a107-4b04-8deb-4998d6e3c69b" />
+
+### Q. Why 19, 20??
+
+### A. 
+
+  1. Mapping the v1 and sample Data Side by Side
+
+    Both arrays share the exact same 7x1 dimensions, meaning their rows are perfectly aligned. If we map out the specific numbers resting inside each row (index), the layout looks like this:
+
+    <img width="1502" height="1072" alt="Screenshot 2026-07-02 at 2 59 41 pm" src="https://github.com/user-attachments/assets/fe99a090-4196-45cd-8aa2-b7a847491f3e" />
+
+  2. The Internal Processing Step
+
+    You executed the conditional filter command: v1 < 4.
+    
+    MATLAB scans the inside of v1 and identifies that the values meeting this criteria reside in the 3rd row (1.5177) and the 4th row (3.6375).
+    
+    Because this true/false mask is passed into sample(...), MATLAB jumps over to the sample array and targets the exact same coordinates: the 3rd and 4th rows.
+    
+    Since the 3rd and 4th slots of the sample array contained 19 and 20, those are the exact values extracted and assigned to z.
+
+  <img width="1230" height="492" alt="Screenshot 2026-07-02 at 2 39 51 pm" src="https://github.com/user-attachments/assets/04ee2eea-e6b1-44e4-bf55-26dbfd06b05a" />
+  <img width="884" height="828" alt="Screenshot 2026-07-02 at 2 26 56 pm" src="https://github.com/user-attachments/assets/75d33009-d978-4f7a-b2c2-b799b16e456d" />
+
+
+* You can use logical indexing to reassign values in an array. For example, to replace all values in the array x that are equal to 999 with the value 1, use this syntax.
+
+  >> x(x==999) = 1
+  
+## Task 4. Modify v1 so that any value less than 4 is replaced with the value 0.
+
+  >> v1(v1 < 4) = 0
+
+  <img width="2104" height="394" alt="Screenshot 2026-07-02 at 3 09 18 pm" src="https://github.com/user-attachments/assets/ac70f728-ca8f-438b-9eb6-a8166abd7335" />
+
+* You can also perform logical indexing with matrices. The variable data is a matrix. Try changing the values in data that are less than 4 to 0.
+
+  >> data(data < 4) = 0
+
+  <img width="2074" height="248" alt="Screenshot 2026-07-02 at 3 10 15 pm" src="https://github.com/user-attachments/assets/6a301fba-c149-420d-836c-75d64b53400d" />
+
+
+# Programming
+
+## 
